@@ -562,3 +562,146 @@ characters[index].name+
 saveGame();
 
 }
+//======================================
+// Brainrot Boss Arena
+// game.js Ver1.0
+//======================================
+
+let money = 1000;
+
+
+// 編成
+let team = [
+"ロウ",
+"ポチ",
+"キノコ",
+"スピーカー",
+"メカうさぎ"
+];
+
+
+// キャラクター
+let characters = [
+
+{
+name:"ロウ",
+power:150,
+hp:300,
+rarity:"N"
+},
+
+{
+name:"ポチ",
+power:170,
+hp:320,
+rarity:"N"
+},
+
+{
+name:"キノコ",
+power:180,
+hp:350,
+rarity:"N"
+},
+
+{
+name:"スピーカー",
+power:200,
+hp:380,
+rarity:"N"
+},
+
+{
+name:"メカうさぎ",
+power:230,
+hp:400,
+rarity:"N"
+},
+
+{
+name:"🍓ストエレ",
+power:2800,
+hp:5000,
+rarity:"SPECIAL"
+},
+
+{
+name:"🦉みゃうる",
+power:3200,
+hp:5500,
+rarity:"SPECIAL"
+}
+
+];
+
+
+// BOSS
+let bosses=[
+
+{
+name:"Beginner Bot",
+power:500,
+hp:2000,
+drop:15
+},
+
+{
+name:"Stone Golem",
+power:800,
+hp:4000,
+drop:12
+},
+
+{
+name:"Wild Beast",
+power:1200,
+hp:7000,
+drop:10
+},
+
+{
+name:"Dark Knight",
+power:2000,
+hp:12000,
+drop:8
+},
+
+{
+name:"Lava Giant",
+power:3500,
+hp:20000,
+drop:6
+},
+
+{
+name:"Shadow King",
+power:5500,
+hp:35000,
+drop:5
+},
+
+{
+name:"Anti Hero",
+power:12000,
+hp:80000,
+drop:3
+},
+
+{
+name:"Anubis",
+power:20000,
+hp:150000,
+drop:3
+},
+
+{
+name:"Hack Tack",
+power:40000,
+hp:300000,
+drop:1
+}
+
+];
+
+
+console.log("Brainrot Boss Arena 起動！");
