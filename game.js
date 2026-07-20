@@ -705,3 +705,118 @@ drop:1
 
 
 console.log("Brainrot Boss Arena 起動！");
+//======================================
+// バトルシステム Ver1
+//======================================
+
+let currentBoss = null;
+let bossHP = 0;
+
+
+// ボス挑戦ボタン
+document.getElementById("bossBtn").onclick = function(){
+
+    let choice = prompt(
+        "👑 挑戦するBOSS番号\n\n" +
+        bosses.map((b,i)=>
+        (i+1)+". "+b.name+
+        " 戦闘力:"+b.power+
+        " HP:"+b.hp
+        ).join("\n")
+    );
+
+    if(choice){
+
+        startBattle(Number(choice)-1);
+
+    }
+
+};
+
+
+// バトル開始
+function startBattle(index){
+
+    currentBoss = bosses[index];
+
+    bossHP = currentBoss.hp;
+
+
+    document.getElementById("homeScreen").style.display="none";
+
+    document.getElementById("battleScreen").style.display="block";
+
+
+    document.getElementById("bossName").innerHTML =
+    "👑 "+currentBoss.name;
+
+
+    document.getElementById("battleLog").innerHTML =
+    "⚔️ "+currentBoss.name+" 出現！<br>";
+
+
+    battle();
+
+}
+
+
+// 戦闘
+function battle(){
+
+    let damage = 0;
+
+
+    team.forEach(name=>{
+
+        let c = characters.find(x=>x.name==name);
+
+        if(c){
+
+            damage += c.power;
+
+        }
+
+    });
+
+
+    bossHP -= damage;
+
+
+    document.getElementById("battleLog").innerHTML +=
+    "💥 味方の攻撃！ "+
+    damage+
+    "ダメージ！<br>";
+
+
+    let hpPercent =
+    (bossHP/currentBoss.hp)*100;
+
+
+    document.getElementById("bossHP").style.width =
+    hpPercent+"%";
+
+
+    if(bossHP<=0){
+
+        winBattle();
+
+    }else{
+
+        setTimeout(battle,1000);
+
+    }
+
+}
+
+
+// 勝利
+function winBattle(){
+
+    document.getElementById("battleLog").innerHTML +=
+    "🏆 勝利！！<br>";
+
+    alert(
+    "🎁 宝箱を手に入れた！"
+    );
+
+}
