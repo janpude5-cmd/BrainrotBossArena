@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brainrot Boss Arena</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>👑 Brainrot Boss Arena</h1>
+  <div id="money">💰 1000G</div>
+</header>
+
+<main>
+
+  <section id="homeScreen">
+
+    <h2>ホーム</h2>
+
+    <button id="teamBtn">👥 編成</button>
+
+    <button id="bossBtn">⚔️ ボスに挑戦</button>
+
+    <button id="shopBtn">🛒 ショップ</button>
+
+    <button id="gachaBtn">🎲 ガチャ</button>
+
+    <button id="bookBtn">📖 図鑑</button>
+
+  </section>
+
+  <section id="battleScreen" style="display:none;">
+
+    <h2 id="bossName">BOSS</h2>
+
+    <div id="bossImage"></div>
+
+    <div id="bossHPBar">
+      <div id="bossHP"></div>
+    </div>
+
+    <div id="battleArea"></div>
+
+    <div id="battleLog"></div>
+
+  </section>
+
+</main>
+
+<script src="game.js"></script>
+
+</body>
+</html>
