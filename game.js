@@ -1243,3 +1243,32 @@ document.body.insertAdjacentHTML("beforeend",html);
 }
 
 showStatus();
+//=========================
+// Ver2.0 Part2-3
+// キャラ詳細
+//=========================
+
+function showCharacterInfo(name){
+
+let c = characters.find(x=>x.name===name);
+
+if(!c){
+    alert("キャラが見つかりません");
+    return;
+}
+
+alert(
+
+"👤 "+c.name+
+
+"\n\n⚔️ 戦闘力 : "+c.power+
+
+"\n❤️ HP : "+c.hp+
+
+"\n⭐ レア度 : "+c.rarity+
+
+"\n✨ 特性 : "+(c.trait || "なし")
+
+);
+
+}
