@@ -940,3 +940,56 @@ document.body.insertAdjacentHTML("beforeend",html);
 }
 
 createHomeMenu();
+//=========================
+// Ver2.0 Part1-3
+//=========================
+
+function createTopUI(){
+
+let html=`
+
+<div id="gameTitle">
+
+<h1>👑 Brainrot Boss Arena 👑</h1>
+
+<div id="version">
+Version 2.0
+</div>
+
+</div>
+
+<div id="updateBox">
+
+<div id="updateText">
+
+🔥 Ver2.0開発中　
+🐺 Anubis追加予定　
+💻 Hack Tack追加予定　
+❤️ RED EVIL JACK実装予定　
+👹 Anti Hero強化完了　
+
+</div>
+
+</div>
+
+<div id="rankBox">
+
+<h2>🏆 BOSSランク</h2>
+
+<div class="rank">👹 Anti Hero【BOSS】</div>
+
+<div class="rank">🐺 Anubis【BOSS＋】</div>
+
+<div class="rank">💻 Hack Tack【極BOSS】</div>
+
+<div class="rank">❤️ RED EVIL JACK【OG】</div>
+
+</div>
+
+`;
+
+document.body.insertAdjacentHTML("afterbegin",html);
+
+}
+
+createTopUI();
