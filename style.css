@@ -462,3 +462,18 @@ transform:translateY(-50px);
 }
 
 }
+/*=========================
+Ver3.0 Part3-2
+=========================*/
+
+.battleLog{
+    margin-top:15px;
+    background:#181818;
+    border:2px solid #555;
+    border-radius:10px;
+    padding:10px;
+    height:180px;
+    overflow-y:auto;
+    color:white;
+    font-size:15px;
+}
