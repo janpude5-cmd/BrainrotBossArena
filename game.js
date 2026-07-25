@@ -923,13 +923,25 @@ ${currentTeam.map(c=>`
 
 <div class="menuGrid">
 
-<div class="menuBtn">⚔️<br>戦う</div>
+<div class="menuBtn" onclick="openTeam()">
+👥<br>編成
+</div>
 
-<div class="menuBtn">🛒<br>ショップ</div>
+<div class="menuBtn">
+⚔️<br>戦う
+</div>
 
-<div class="menuBtn">🎲<br>ガチャ</div>
+<div class="menuBtn">
+🛒<br>ショップ
+</div>
 
-<div class="menuBtn">📖<br>図鑑</div>
+<div class="menuBtn">
+🎲<br>ガチャ
+</div>
+
+<div class="menuBtn">
+📖<br>図鑑
+</div>
 
 </div>
 
@@ -1054,3 +1066,62 @@ soundOn ?
 }
 
 createTitleScreen();
+//=========================
+// Ver2.0 Part2-1
+//=========================
+
+let team=[
+"🍓 すとえれ",
+"🦉 みゃうる",
+"（空き）",
+"（空き）",
+"（空き）"
+];
+
+function openTeam(){
+
+let html=`
+
+<div id="teamScreen">
+
+<h2>👥 編成</h2>
+
+${team.map((c,i)=>`
+
+<div class="teamSlot">
+
+<span>${i+1}. ${c}</span>
+
+<button onclick="alert('Part2-2で変更機能追加')">
+変更
+</button>
+
+</div>
+
+`).join("")}
+
+<button id="closeTeam" onclick="closeTeam()">
+
+閉じる
+
+</button>
+
+</div>
+
+`;
+
+let old=document.getElementById("teamScreen");
+
+if(old) old.remove();
+
+document.body.insertAdjacentHTML("beforeend",html);
+
+document.getElementById("teamScreen").style.display="block";
+
+}
+
+function closeTeam(){
+
+document.getElementById("teamScreen").remove();
+
+}
