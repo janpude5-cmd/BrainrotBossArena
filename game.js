@@ -1344,3 +1344,41 @@ team = JSON.parse(data);
 loadTeam();
 
 showStatus();
+//=========================
+// Ver3.0 Part3-1
+// 攻撃アニメーション
+//=========================
+
+function playAttackAnimation(element){
+
+element.classList.add("attackAnimation");
+
+setTimeout(()=>{
+
+element.classList.remove("attackAnimation");
+
+},350);
+
+}
+
+function showDamage(x,y,damage){
+
+const d=document.createElement("div");
+
+d.className="damageText";
+
+d.innerText="-"+damage;
+
+d.style.left=x+"px";
+
+d.style.top=y+"px";
+
+document.body.appendChild(d);
+
+setTimeout(()=>{
+
+d.remove();
+
+},800);
+
+}
