@@ -286,3 +286,45 @@ Ver2.0 Part1-4
     color:#aaa;
     font-size:14px;
 }
+/*=========================
+Ver2.0 Part2-1
+=========================*/
+
+#teamScreen{
+    display:none;
+    margin-top:20px;
+    padding:20px;
+    background:#222;
+    border:2px solid #4caf50;
+    border-radius:15px;
+}
+
+.teamSlot{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#333;
+    margin:10px 0;
+    padding:12px;
+    border-radius:10px;
+}
+
+.teamSlot button{
+    padding:8px 15px;
+    border:none;
+    border-radius:8px;
+    background:#4caf50;
+    color:white;
+    cursor:pointer;
+}
+
+#closeTeam{
+    margin-top:15px;
+    width:100%;
+    padding:12px;
+    background:#e53935;
+    border:none;
+    border-radius:10px;
+    color:white;
+    cursor:pointer;
+}
