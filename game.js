@@ -1382,3 +1382,62 @@ d.remove();
 },800);
 
 }
+//=========================
+// Ver3.0 Part3-2
+// オートバトル
+//=========================
+
+let battleRunning = false;
+
+function addBattleLog(text){
+
+let log=document.getElementById("battleLog");
+
+if(!log){
+
+document.body.insertAdjacentHTML("beforeend",
+`<div id="battleLog" class="battleLog"></div>`);
+
+log=document.getElementById("battleLog");
+
+}
+
+log.innerHTML+=text+"<br>";
+
+log.scrollTop=log.scrollHeight;
+
+}
+
+function startAutoBattle(){
+
+if(battleRunning) return;
+
+battleRunning=true;
+
+addBattleLog("⚔️ 戦闘開始！");
+
+let turn=0;
+
+const timer=setInterval(()=>{
+
+if(turn>=team.length){
+
+clearInterval(timer);
+
+battleRunning=false;
+
+addBattleLog("✅ 1ターン終了");
+
+return;
+
+}
+
+const name=team[turn];
+
+addBattleLog("👤 "+name+" が攻撃！");
+
+turn++;
+
+},1000);
+
+}
