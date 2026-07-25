@@ -1441,3 +1441,60 @@ turn++;
 },1000);
 
 }
+//=========================
+// ボタン接続
+//=========================
+
+document.getElementById("teamBtn").onclick=function(){
+
+if(typeof openTeam === "function"){
+    openTeam();
+}else{
+    alert("編成機能を準備中です");
+}
+
+};
+
+
+document.getElementById("bossBtn").onclick=function(){
+
+if(typeof startBattle === "function"){
+    startBattle();
+}else{
+    alert("戦闘機能を準備中です");
+}
+
+};
+
+
+document.getElementById("shopBtn").onclick=function(){
+
+if(typeof openShop === "function"){
+    openShop();
+}else{
+    alert("ショップ機能を準備中です");
+}
+
+};
+
+
+document.getElementById("gachaBtn").onclick=function(){
+
+if(typeof openGacha === "function"){
+    openGacha();
+}else{
+    alert("ガチャ機能を準備中です");
+}
+
+};
+
+
+document.getElementById("bookBtn").onclick=function(){
+
+if(typeof openBook === "function"){
+    openBook();
+}else{
+    alert("図鑑機能を準備中です");
+}
+
+};
