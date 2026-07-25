@@ -234,3 +234,55 @@ transform:translateX(-100%);
 .rank{
     margin:8px 0;
 }
+/*=========================
+Ver2.0 Part1-4
+=========================*/
+
+#titleScreen{
+    position:fixed;
+    inset:0;
+    background:#111;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+#titlePanel{
+    width:420px;
+    max-width:90%;
+    background:#222;
+    border:3px solid gold;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+}
+
+#titlePanel h1{
+    color:gold;
+    margin-bottom:10px;
+}
+
+.titleBtn{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:12px;
+    background:#444;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.titleBtn:hover{
+    background:#666;
+    transform:scale(1.03);
+}
+
+#saveInfo{
+    margin-top:15px;
+    color:#aaa;
+    font-size:14px;
+}
