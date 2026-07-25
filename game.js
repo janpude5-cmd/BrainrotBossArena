@@ -1153,9 +1153,11 @@ ${ownedCharacters.map(c=>`
 
 <span>${c}</span>
 
-<button onclick="alert('Part2-3で編成できるようになります！')">
+<button class="selectBtn" onclick="addToTeam('${c}')">
 
 選択
+
+</button>
 
 </button>
 
