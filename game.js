@@ -1125,3 +1125,56 @@ function closeTeam(){
 document.getElementById("teamScreen").remove();
 
 }
+//=========================
+// Ver2.0 Part2-2
+//=========================
+
+const ownedCharacters=[
+"🍓 すとえれ",
+"🦉 みゃうる",
+"👹 Anti Hero",
+"🐺 Anubis",
+"💻 Hack Tack"
+];
+
+function openCharacterList(){
+
+let html=`
+
+<div id="teamScreen">
+
+<h2>📦 所持キャラ</h2>
+
+<div id="characterList">
+
+${ownedCharacters.map(c=>`
+
+<div class="charCard">
+
+<span>${c}</span>
+
+<button onclick="alert('Part2-3で編成できるようになります！')">
+
+選択
+
+</button>
+
+</div>
+
+`).join("")}
+
+</div>
+
+<button id="closeTeam" onclick="closeTeam()">
+
+閉じる
+
+</button>
+
+</div>
+
+`;
+
+document.body.insertAdjacentHTML("beforeend",html);
+
+}
