@@ -129,3 +129,43 @@ button:hover{
     border-radius:15px;
     padding:15px;
 }
+/*=========================
+Ver2.0 Part1-2
+=========================*/
+
+#teamBox{
+    margin-top:20px;
+    background:#202020;
+    border:2px solid #4caf50;
+    border-radius:15px;
+    padding:15px;
+}
+
+.member{
+    background:#333;
+    margin:8px 0;
+    padding:10px;
+    border-radius:10px;
+}
+
+.menuGrid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.menuBtn{
+    background:#333;
+    border:2px solid #777;
+    border-radius:15px;
+    padding:20px;
+    font-size:22px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.menuBtn:hover{
+    transform:scale(1.05);
+    background:#444;
+}
