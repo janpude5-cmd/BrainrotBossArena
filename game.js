@@ -1178,3 +1178,68 @@ ${ownedCharacters.map(c=>`
 document.body.insertAdjacentHTML("beforeend",html);
 
 }
+//=========================
+// Ver2.0 Part2-3
+//=========================
+
+const playerData={
+
+level:1,
+exp:0,
+rank:"Beginner"
+
+};
+
+function calculatePower(){
+
+let power=0;
+
+team.forEach(name=>{
+
+let c=characters.find(x=>x.name==name);
+
+if(c) power+=c.power;
+
+});
+
+return power;
+
+}
+
+function showStatus(){
+
+let old=document.getElementById("statusBox");
+
+if(old) old.remove();
+
+let html=`
+
+<div id="statusBox">
+
+<h2>📊 プレイヤー情報</h2>
+
+<div class="statusRow">
+⭐ Lv : ${playerData.level}
+</div>
+
+<div class="statusRow">
+⚔️ 総戦闘力 : ${calculatePower()}
+</div>
+
+<div class="statusRow">
+🏅 ランク : ${playerData.rank}
+</div>
+
+<div class="statusRow">
+👥 編成人数 : ${team.length}/5
+</div>
+
+</div>
+
+`;
+
+document.body.insertAdjacentHTML("beforeend",html);
+
+}
+
+showStatus();
