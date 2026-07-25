@@ -993,3 +993,64 @@ document.body.insertAdjacentHTML("afterbegin",html);
 }
 
 createTopUI();
+//=========================
+// Ver2.0 Part1-4
+//=========================
+
+let soundOn = true;
+
+function createTitleScreen(){
+
+const html = `
+
+<div id="titleScreen">
+
+<div id="titlePanel">
+
+<h1>👑 Brainrot Boss Arena 👑</h1>
+
+<p>Version 2.0</p>
+
+<button class="titleBtn" onclick="startGame()">
+▶ ゲームスタート
+</button>
+
+<button class="titleBtn" onclick="toggleSound()">
+🔊 効果音 ON / OFF
+</button>
+
+<div id="saveInfo">
+
+セーブ：自動保存
+
+</div>
+
+</div>
+
+</div>
+
+`;
+
+document.body.insertAdjacentHTML("afterbegin",html);
+
+}
+
+function startGame(){
+
+document.getElementById("titleScreen").remove();
+
+}
+
+function toggleSound(){
+
+soundOn=!soundOn;
+
+alert(
+soundOn ?
+"🔊 効果音 ON" :
+"🔇 効果音 OFF"
+);
+
+}
+
+createTitleScreen();
