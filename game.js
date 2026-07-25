@@ -1092,8 +1092,10 @@ ${team.map((c,i)=>`
 
 <span>${i+1}. ${c}</span>
 
-<button onclick="alert('Part2-2で変更機能追加')">
+<button onclick="chooseSlot(${i})">
+
 変更
+
 </button>
 
 </div>
