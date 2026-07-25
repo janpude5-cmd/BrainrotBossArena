@@ -392,3 +392,20 @@ Ver2.0 Part2-3
     margin-top:8px;
     color:#ddd;
 }
+/*=========================
+Ver2.0 Part2-4
+=========================*/
+
+.selectBtn{
+    margin-left:10px;
+    background:#2196f3;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:8px 15px;
+    cursor:pointer;
+}
+
+.selectBtn:hover{
+    background:#1976d2;
+}
