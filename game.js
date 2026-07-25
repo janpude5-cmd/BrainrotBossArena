@@ -895,3 +895,48 @@ document.body.insertAdjacentHTML("afterbegin",html);
 }
 
 window.onload=randomBoss;
+//=========================
+// Ver2.0 Part1-2
+//=========================
+
+const currentTeam=[
+"🍓 すとえれ",
+"🦉 みゃうる",
+"（空き）",
+"（空き）",
+"（空き）"
+];
+
+function createHomeMenu(){
+
+let html=`
+
+<div id="teamBox">
+
+<h2>👥 現在の編成</h2>
+
+${currentTeam.map(c=>`
+<div class="member">${c}</div>
+`).join("")}
+
+</div>
+
+<div class="menuGrid">
+
+<div class="menuBtn">⚔️<br>戦う</div>
+
+<div class="menuBtn">🛒<br>ショップ</div>
+
+<div class="menuBtn">🎲<br>ガチャ</div>
+
+<div class="menuBtn">📖<br>図鑑</div>
+
+</div>
+
+`;
+
+document.body.insertAdjacentHTML("beforeend",html);
+
+}
+
+createHomeMenu();
