@@ -1310,3 +1310,31 @@ openTeam();
 showStatus();
 
 }
+//=========================
+// Ver2.0 Part2-5
+// 編成セーブ
+//=========================
+
+function saveTeam(){
+
+localStorage.setItem(
+"BrainrotBossArenaTeam",
+JSON.stringify(team)
+);
+
+}
+
+function loadTeam(){
+
+const data =
+localStorage.getItem("BrainrotBossArenaTeam");
+
+if(data){
+
+team = JSON.parse(data);
+
+}
+
+}
+
+loadTeam();
