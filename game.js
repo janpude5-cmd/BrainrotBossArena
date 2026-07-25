@@ -1280,3 +1280,29 @@ alert(
 console.log("キャラ詳細テスト");
 
 showCharacterInfo(team[0]);
+//=========================
+// Ver2.0 Part2-4
+// 編成変更
+//=========================
+
+let selectedSlot = 0;
+
+function chooseSlot(slot){
+
+selectedSlot = slot;
+
+openCharacterList();
+
+}
+
+function addToTeam(name){
+
+team[selectedSlot] = name;
+
+closeTeam();
+
+openTeam();
+
+showStatus();
+
+}
