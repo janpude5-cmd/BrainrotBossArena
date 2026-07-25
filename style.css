@@ -86,3 +86,46 @@ button:hover{
   padding:15px;
   border-radius:10px;
 }
+/* =========================
+   Ver2.0 Home UI
+========================= */
+
+#playerInfo{
+    background:#222;
+    border:2px solid #555;
+    border-radius:15px;
+    padding:15px;
+    margin:15px;
+}
+
+#playerInfo h2{
+    margin:0 0 10px;
+}
+
+.infoGrid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.infoCard{
+    background:#333;
+    border-radius:10px;
+    padding:10px;
+}
+
+#news{
+    margin-top:20px;
+    background:#1f1f1f;
+    border:2px solid #666;
+    border-radius:15px;
+    padding:15px;
+}
+
+#recommendBoss{
+    margin-top:20px;
+    background:#2a1b1b;
+    border:2px solid crimson;
+    border-radius:15px;
+    padding:15px;
+}
