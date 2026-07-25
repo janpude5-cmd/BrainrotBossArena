@@ -820,3 +820,78 @@ function winBattle(){
     );
 
 }
+//=========================
+// Ver2.0 Home
+//=========================
+
+let playerLevel = 1;
+let defeatedBoss = 0;
+let totalPower = 500;
+
+const recommendBossList=[
+"Anti Hero",
+"Anubis",
+"Hack Tack",
+"RED EVIL JACK"
+];
+
+function randomBoss(){
+
+let boss=
+recommendBossList[
+Math.floor(Math.random()*recommendBossList.length)
+];
+
+let html=`
+
+<div id="playerInfo">
+
+<h2>👤 プレイヤー情報</h2>
+
+<div class="infoGrid">
+
+<div class="infoCard">
+💰 所持金<br>${money}
+</div>
+
+<div class="infoCard">
+⭐ Lv<br>${playerLevel}
+</div>
+
+<div class="infoCard">
+🏆 撃破数<br>${defeatedBoss}
+</div>
+
+<div class="infoCard">
+⚔️ 戦闘力<br>${totalPower}
+</div>
+
+</div>
+
+<div id="recommendBoss">
+
+<h3>👹 今日のおすすめBOSS</h3>
+
+${boss}
+
+</div>
+
+<div id="news">
+
+<h3>📢 お知らせ</h3>
+
+・Ver2.0開発中！<br>
+・Anubis追加予定！<br>
+・Hack Tack追加予定！<br>
+
+</div>
+
+</div>
+
+`;
+
+document.body.insertAdjacentHTML("afterbegin",html);
+
+}
+
+window.onload=randomBoss;
