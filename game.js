@@ -1303,11 +1303,15 @@ function addToTeam(name){
 
 team[selectedSlot] = name;
 
+saveTeam();
+
 closeTeam();
 
 openTeam();
 
 showStatus();
+
+}
 
 }
 //=========================
@@ -1338,3 +1342,5 @@ team = JSON.parse(data);
 }
 
 loadTeam();
+
+showStatus();
