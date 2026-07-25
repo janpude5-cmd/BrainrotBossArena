@@ -409,3 +409,56 @@ Ver2.0 Part2-4
 .selectBtn:hover{
     background:#1976d2;
 }
+/*=========================
+Ver3.0 Part3-1
+=========================*/
+
+.attackAnimation{
+    animation:attackMove .35s ease;
+}
+
+@keyframes attackMove{
+
+0%{
+transform:translateX(0px);
+}
+
+50%{
+transform:translateX(120px);
+}
+
+100%{
+transform:translateX(0px);
+}
+
+}
+
+.damageText{
+
+position:absolute;
+
+font-size:26px;
+
+font-weight:bold;
+
+color:#ff4040;
+
+pointer-events:none;
+
+animation:damageFloat .8s forwards;
+
+}
+
+@keyframes damageFloat{
+
+0%{
+opacity:1;
+transform:translateY(0);
+}
+
+100%{
+opacity:0;
+transform:translateY(-50px);
+}
+
+}
